@@ -5,7 +5,7 @@ from django.utils.text import slugify
 class Post(models.Model):
     headline = models.CharField(max_length=255)
     sub_headline = models.CharField(max_length=255, null=True, blank=True)
-    image = models.ImageField(verbose_name='Image', upload_to="images", default="placeholder.png")
+    image = models.ImageField(verbose_name='Image', upload_to="project_img", default="placeholder.png")
     body = models.TextField(null=True, blank=True)
     created_time = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)

@@ -20,6 +20,9 @@ def posts(request):
     context = {'posts': posts}
     return render(request, 'base/posts.html', context)
 
+def post(request):
+    return render(request, 'base/post.html')
+
 
 def profile(request):
     return render(request, 'base/profile.html')
