@@ -1,29 +1,37 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
+
+{% block title %}
+<title>Vanzytler Artem | Posts</title>
+{% endblock title  %}
+
+
 {% block content %}
+<section class="s2">
+    {% include 'base/navbar.html' %}
+    <div class="main-container">
 
-<div class="main-container">
-
-    <h1>Posts</h1>
-
-    <div class="post-wrapper">
-        
-        {% for post in posts %}
-        <div>
-            <div class="post">
-                <img class="thumbnail" src="{{ post.image.url }}">
-                <div class="post-preview">
-                    <h6 class="post-title">{{ post.headline }}</h6>
-                    <p class="post-intro">{{ post.sub_headline }}</p>
-                    <a href="{% url 'post_details' %}">View more</a>
+    
+        <h1>Posts</h1>
+        <div class="post-wrapper">
+            
+            {% for post in posts %}
+            <div>
+                <div class="post">
+                    <img class="thumbnail" src="{{ post.image.url }}">
+                    <div class="post-preview">
+                        <h6 class="post-title">{{ post.headline }}</h6>
+                        <p class="post-intro">{{ post.sub_headline }}</p>
+                        <a href="{% url 'post_details' %}">View more</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        {% empty %}
-            <h3>No posts found...</h3>
-        {% endfor %}
-        
+            {% empty %}
+                <h3>No posts found...</h3>
+            {% endfor %}
+   
 
-</div>
+    </div>
+</section>
 {% endblock content %}

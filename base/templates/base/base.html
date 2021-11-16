@@ -2,7 +2,9 @@
 {% load static %}
 <html lang="en">
 <head>
+	{% block title %}
 	<title>Vanzytler Artem</title>
+    {% endblock title  %}
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
@@ -16,11 +18,15 @@
 </head>
 <body>
 
-    {% include 'base/navbar.html' %}
 
     {% block content %}
 
     {% endblock content  %}
+	<script type="text/javascript">
+		let static = "{% static 'css' %}"
+	</script>
 
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
+
