@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.template.loader import render_to_string
+from django.urls import reverse
 
 from .models import Post
 
@@ -20,17 +21,16 @@ def posts(request):
     context = {'posts': posts}
     return render(request, 'base/posts.html', context)
 
-def post(request):
-    return render(request, 'base/post.html')
 
+def post(request,post_slug):
+    post = get_object_or_404(Post, slug=post_slug)
+    return render(request, 'base/post.html', {'post': post})
 
 def profile(request):
     return render(request, 'base/profile.html')
 
 
 def sendEmail(request):
-
-
     if request.method == 'POST':
 
         template = render_to_string('base/email_template.html', {

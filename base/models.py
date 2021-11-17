@@ -1,9 +1,11 @@
 from django.db import models
+from django.urls.base import reverse
 from django.utils.text import slugify
 
 
 class Post(models.Model):
     headline = models.CharField(max_length=255)
+    slug = models.SlugField(unique=True)
     sub_headline = models.CharField(max_length=255, null=True, blank=True)
     image = models.ImageField(verbose_name='Image', upload_to="project_img", default="placeholder.png")
     body = models.TextField(null=True, blank=True)
@@ -14,6 +16,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.headline
+    
+    def get_absolute_url(self):
+        return reverse("post", kwargs={'post_slug': self.slug})
 
     def save(self, *args, **kwargs):
 
