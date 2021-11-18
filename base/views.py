@@ -24,7 +24,7 @@ def posts(request):
 
 def post(request,post_slug):
     post = get_object_or_404(Post, slug=post_slug)
-    return render(request, 'base/post.html', {'post': post})
+    return render(request, f'base/posts/{post.slug}.html', {'post': post})
 
 def profile(request):
     return render(request, 'base/profile.html')

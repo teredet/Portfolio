@@ -1,0 +1,65 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>E-Commerce</title>
+{% endblock title  %}
+
+{% block content %}
+<section class="s2">
+	{% include 'base/navbar.html' %}
+	<div class="main-container">
+		<div class="header">
+			<h2>E-Commerce</h2>
+
+			<a class="atuin-btn" href="https://github.com/teredet/Shop" target="_blank">GitHub Repository</a>	
+			<p>My first project in the field of e-commerce. One of my first projects that I created while studying Python and Django.</p>
+        </div>
+        
+        <h5>Technologies:</h5>
+		<p>Python</p>
+		<p>Django</p>
+		<p>Pillow</p>
+		
+
+		<h5>Features</h5>
+		<p>Category</p>
+		<p>Registration, authorization</p>
+		<p>Personal account with past orders</p>
+		<p>Cart</p>
+		<p>Checkout</p>
+		
+        <h5>Main page</h5>
+		<div class="img-container">
+			<img class='post-img' src="https://github.com/teredet/Shop/raw/master/img/main.png">
+		</div>
+
+
+        <h5>Category page</h5>
+        <div class="img-container">
+			<img class='post-img' src="https://github.com/teredet/Shop/raw/master/img/category.png">
+		</div>
+
+        <h5>Cart page</h5>
+        <div class="img-container">
+			<img class='post-img' src="https://github.com/teredet/Shop/raw/master/img/cart.png">
+		</div>
+
+        <h5>Product page</h5>
+        <div class="img-container">
+			<img class='post-img' src="https://github.com/teredet/Shop/raw/master/img/product_spec.png">
+		</div>
+
+        <h5>Registration page</h5>
+        <div class="img-container">
+			<img class='post-img' src="https://github.com/teredet/Shop/raw/master/img/reg.png">
+		</div>
+
+        <h5>Order page</h5>
+        <div class="img-container">
+			<img class='post-img' src="https://github.com/teredet/Shop/raw/master/img/order.png">
+		</div>
+    </div>
+</section>
+
+{% endblock content %}
