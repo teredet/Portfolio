@@ -2,14 +2,33 @@
 {% load static %}
 
 {% block title %}
-<title>Parser</title>
+<title>Vacancy parser</title>
 {% endblock title  %}
 
 {% block content %}
 <section class="s2">
 	{% include 'base/navbar.html' %}
 	<div class="main-container">
-        <h1>Parser</h1>
+        <h2>Vacancy parser</h2>
+        
+		<a class="atuin-btn" href="https://github.com/teredet/Parser" target="_blank">GitHub Repository</a>	
+		<p>I wrote this program to monitor vacancies from different sites at the click of one button. The program takes information from the following sites: djinni.co, dou.ua, work.ua</p>
+        
+        
+        <h5>Technologies:</h5>
+		<p>Python</p>
+		<p>BeautifulSoup4</p>
+		<p>Requests</p>
+		
+
+		<h5>Features</h5>
+		<p>At the moment, it turned out to implement the receipt of all vacancies upon request from the site djinni.co and work.ua.</p>
+		<p>From the site dou.ua I managed to get only the last 20 vacancies.</p>
+		
+        <h5>Result</h5>
+		<div class="img-container">
+			<img class='post-img' src="https://github.com/teredet/Parser/raw/master/img/1.png">
+		</div>
 
     </div>
 </section>
