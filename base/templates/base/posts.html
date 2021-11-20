@@ -15,18 +15,17 @@
     
         <h1>Posts</h1>
         <div class="post-wrapper">
-            
             {% for post in posts %}
-            <div>
-                <div class="post">
-                    <img class="thumbnail" src="{{ post.image.url }}">
-                    <div class="post-preview">
-                        <h6 class="post-title">{{ post.headline }}</h6>
-                        <p class="post-intro">{{ post.sub_headline }}</p>
-                        <a href="{{ post.get_absolute_url }}">View more</a>
-                    </div>
-                </div>
-            </div>
+				<div>
+					<div class="post"><a href="{{ post.get_absolute_url }}">
+						<img class="thumbnail" src="{{ post.image.url }}">
+						<div class="post-preview">
+							<h6 class="post-title">{{ post.headline }}</h6>
+							<p class="post-intro">{{ post.sub_headline }}</p>
+							<p class="post-subtext">Click on me to find out more.</p>
+						</a></div>
+					</div>
+			</div>
             {% empty %}
                 <h3>No posts found...</h3>
             {% endfor %}
