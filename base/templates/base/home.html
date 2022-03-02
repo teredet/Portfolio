@@ -90,10 +90,9 @@
 	<section class="s1">
 		<div class="main-container">
 			<h3 style="text-align: center;">Some of my past projects</h3>
-
+			
 			<div class="post-wrapper">
 				{% for post in posts %}
-				<div>
 					<div class="post"><a href="{{ post.get_absolute_url }}">
 						<img class="thumbnail" src="{{ post.image.url }}">
 						<div class="post-preview">
@@ -101,10 +100,8 @@
 							<p class="post-intro">{{ post.sub_headline }}</p>
 							<p class="post-subtext">Click on me to find out more.</p>
 					</a></div>
-				</div>
+					</div>	
 				{% endfor %}
-			</div>
-
 			</div>
 
 			<p align="center">
