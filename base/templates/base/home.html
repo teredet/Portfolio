@@ -9,7 +9,6 @@
 				<h1>Hi, I'm Artem Vanzytler</h1>
 			</div>
 
-
 			<div class="intro-wrapper">
 				{% include 'base/navbar.html' %}
 
@@ -28,7 +27,6 @@
 				</div>
 
 				<div class="right-column">
-
 					<div id="preview-shadow">
 						<div id="preview">
 							<div id="corner-tl" class="corner"></div>
@@ -51,15 +49,11 @@
 				<div class="about-me">
 					<h4>More about me</h4>
 
-					<p>I am an enthusiast who develops interesting applications in Python / Django/ etc.</p>
-
-					<p>At the moment I am also open to commercial offers</p>
-
-
+					<p>I am an enthusiast, learning and developing interesting applications in Python. Terminal applications, GUI applications and web applications. You can learn more about my projects in the "Projects" section and in my CV.</p>
+					<p>At the moment I am also open to commercial offers.</p>
 					<hr>
 
-					<h4>Skills</h4>
-
+					<h4>Professionals Skills</h4>
 					<div id="skills">
 						<ul>
 							<li>Python</li>
@@ -68,20 +62,15 @@
 							<li>HTML/CSS</li>
 							<li>Photoshop</li>
 						</ul>
-
 						<ul>
 							<li>Windows</li>
 							<li>Linux</li>
 							<li>Bash</li>
 							<li>Git</li>
 							<li>NGINX</li>
-							<li>Docker</li>
 						</ul>
-
 					</div>
-					
-
-					<p>Backend developer with primary focus on Django: <a target="_blank" href="{% static 'ArtemVanzytlerCV.pdf' %}">Download Resume</a></p>
+					<p>Backend developer with primary focus on Django: <a target="_blank" href="{% static 'ArtemVanzytlerCV_compressed.pdf' %}">Download Resume</a></p>
 
 				</div>
 
@@ -89,15 +78,13 @@
 				<div class="social-links">
 					<img id="social_img" src="{% static 'images/social-networks.jpg' %}">
 					<h3>My social networks</h3>
-					
-					<a target="_blank" href="https://github.com/teredet">GitHub</a>
-					<br>
-					<a target="_blank" href="https://www.linkedin.com/in/artem-vanzytler/">LinkedIn</a>
-					<br>
-					<a target="_blank" href="https://www.facebook.com/teredet">Facebook</a>
-			</div>
 
-		</div>
+					<a target="_blank" href="https://github.com/teredet" class="fa fa-github" aria-hidden="true"> GitHub</a>
+                    <a target="_blank" href="https://www.facebook.com/teredet" class="fa fa-facebook" aria-hidden="true"> Facebook</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/artem-vanzytler/" class="fa fa-linkedin-square" aria-hidden="true"> LinkedIn</a>
+				</div>
+			</div>
+		</div>		
 	</section>
 
 	<section class="s1">
@@ -105,7 +92,6 @@
 			<h3 style="text-align: center;">Some of my past projects</h3>
 
 			<div class="post-wrapper">
-
 				{% for post in posts %}
 				<div>
 					<div class="post"><a href="{{ post.get_absolute_url }}">
@@ -114,10 +100,10 @@
 							<h6 class="post-title">{{ post.headline }}</h6>
 							<p class="post-intro">{{ post.sub_headline }}</p>
 							<p class="post-subtext">Click on me to find out more.</p>
-						</a></div>
-					</div>
-			</div>
+					</a></div>
+				</div>
 				{% endfor %}
+			</div>
 
 			</div>
 
